@@ -17,7 +17,8 @@ module ClassMethods
   def make_permalink(method)
     define_method "permalink" do 
       field = self.send(method.to_sym) 
-      "#{id}-#{field.gsub(/[^\w]/, "-").downcase}"
+      link = "#{id}-#{field.gsub(/[^\w]+/, "-").downcase}"
+      link.gsub(/-$/, "")       # remove trailing dashes
     end
   end
 end

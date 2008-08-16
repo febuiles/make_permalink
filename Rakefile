@@ -2,14 +2,13 @@ require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
 
-desc 'Default: run unit tests.'
-task :default => :test
+desc 'Default: run specs.'
+task :default => :spec
 
-desc 'Test the make_permalink plugin.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = true
+desc "Runs the spec suite"
+task :spec do
+  spec_path = "#{File.dirname(__FILE__)}/spec"
+  sh "spec #{spec_path} -O #{spec_path}/spec.opts "
 end
 
 desc 'Generate documentation for the make_permalink plugin.'
