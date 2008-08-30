@@ -1,11 +1,12 @@
-= make_permalink
+make_permalink
+==============
 
 http://github.com/febuiles/make_permalink
 
-
 make_permalink is a Rails plugin that allows you to easily create permalinks for attributes in your models.
 
-= Example
+Example
+=======
 
    class Post < ActiveRecord::Base
       make_permalink :title
@@ -14,8 +15,9 @@ make_permalink is a Rails plugin that allows you to easily create permalinks for
    p = Post.create(:title => "Hello World!")
    p.permalink   # => "1-hello-world"
 
-=== Bugs/Contact
-mailto:federico.builes@gmail.com
+Bugs/Contact
+------------
 
+[federico.builes@gmail.com](mailto://federico.builes@gmail.com)
 
 Copyright (c) 2008 Federico Builes, released under the MIT license
