@@ -8,7 +8,7 @@ make_permalink is a Rails plugin that allows you to easily create permalinks for
 Example
 -----------
 
-     class Post < ActiveRecord::Base
+     class Post &lt; ActiveRecord::Base
         make_permalink :title
      end
   
